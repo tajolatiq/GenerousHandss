@@ -1,0 +1,354 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; /*allowing content to extend to the edges of the viewport*/
+	background-color: gray;
+    background-image: url('Nur Andi Ravsanjani Gusma.jpg');
+    background-size: cover; /*Ensures that the background image covers the entire body area*/
+    background-position: center; /*image will be centered both vertically and horizontally within the body*/
+    display: flex; /*makes the body a flex container , solve the footer problem, always make sure footer at the bottom*/
+    flex-direction: column; /*the flex container (body) arranges its children vertically, from top to bottom.*/
+    min-height: 100vh; /*100% of the viewport height , also solve the footer problem, always make sure footer at the bottom*/
+}
+
+
+
+/* Header Styles */
+header {
+    background-color: gray; /*Sets the background color of the header*/
+    color: #fff; /*Sets the text color inside the header*/
+    padding: 1rem; /*Adds space inside the header around its content*/
+    text-align: center;/*Centers the text horizontally inside the header ,centered*/ 
+    background-image: url('RDNE Stock project.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px; /*Sets the height of the header*/
+    display: flex;
+    flex-direction: column; /*the flex container (header) arranges its children vertically, from top to bottom*/
+    justify-content: center; /*Centers the child elements vertically within the header*/
+    align-items: center; /*solve the background box to fot with the header font size*/
+    font-family: Arial, sans-serif;
+}
+h1 {
+    margin: 0; /*Removes the default margin around the h1 element*/
+    padding: 20px 40px; /*Adds space inside the h1 element around its content , 20px: Padding on the top and bottom , 40px: Padding on the left and right , */
+    font-size: 6rem; 
+    color: white;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.7), rgba(128, 128, 128, 0.9)); /*Applies a gradient background to the h1 element*/
+    border-radius: 10px; /*Rounds the corners of the h1 element*/
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 8vh; /*container's height will always be 8% of the total viewport height*/
+}
+
+
+
+
+/* Navigation Styles */
+nav ul {
+    display: flex; /*arrange the navigation button in horizontal*/
+    list-style: none; /*remove list point on each navigation button*/
+    padding: 0;
+    margin: 0;
+}
+
+.btnnav {
+    padding: 10px 20px;
+    background-color: gray;
+    color: white;
+    text-decoration: none; /*remove underline for each text navigation*/
+	font-weight: bold;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+	margin: 0 10px; /*0 on the top and bottom, 10px on the left and right*/
+}
+.btnnav:hover {
+    background-color: #e04e2f; /*e0 represents the intensity of red , 4e represents the intensity of green , 2f represents the intensity of blue*/
+}
+
+
+/* Main Content Styles */
+.main-content {
+    flex: 1;
+    padding: 2rem;
+    text-align: center; /*Center-align any text or inline elements within it*/
+}
+
+
+/* Section Styles */
+.about-section, .team-section, .aim-section, .latest-activities, .testimonials, .newsletter, .submitdonation, .donationtable, .submitrequest, .requesttable, .requestforhelp, .submitrequesttable, .tellus, .tellustable, .faq, .contact-info, .login {
+    background-color: rgba(255, 255, 255, 0.8); 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 800px;
+    color: #333; /* Font color dark gray */
+}
+.about-section h2, .team-section h2, .aim-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: gray; 
+	text-decoration: underline;
+
+}
+.about-section p, .aim-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+	color: black
+}
+.about-content {
+    max-width: 1000px;
+    margin: 20px auto;
+    text-align: center;
+    width: 100%;
+}
+
+
+
+/* Team Section Styles */
+.team-section .team-members {  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.team-section .team-member {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.team-section .team-member:hover {
+    transform: translateY(-10px);
+}
+.team-member img {
+    width: 200x;
+    height: 150px;
+    border-radius: 20%;
+    margin-bottom: 5px;
+}
+.team-section .team-member h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 10px;
+}
+
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-wrap: wrap; /*Allows the form elements to wrap onto the next line* , making the form responsive*/
+    gap: 15px; /*allow gap between box*/
+}
+
+form button {
+    flex-basis: 100%; /*spans the submit button full width*/
+    padding: 10px; /* size for the button*/
+    margin-top: 5px; /* size for the button*/
+    font-size: 16px; /* size for the button*/
+}
+form input, form textarea, form select, form button { /*use to set the login form page since id for the story page is used same as storyform*/
+    flex-basis: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 16px;
+
+}
+
+
+
+
+
+/* Specific Form Containers */
+#donationForm, #RequestForm, #volunteerForm, #StoryForm {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+ 
+}
+
+
+/* Form Submit Buttons */
+#donationForm button[type="submit"], 
+#RequestForm button[type="submit"], 
+#volunteerForm button[type="submit"], 
+#StoryForm button[type="submit"] {
+    width: auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#donationForm button[type="submit"]:hover, 
+#RequestForm button[type="submit"]:hover, 
+#volunteerForm button[type="submit"]:hover, 
+#StoryForm button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+/* Hero Section Styles */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('Julia M Cameron pexel.jpg') center/cover no-repeat;
+    background-size: cover;
+    background-position: 50% 70%;
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+}
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+.btn { /*button setting on homepage*/
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff5733;
+    color: #fff;
+    text-decoration: none; /*remove underline*/
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.btn:hover {
+    background-color: #e04e2f;
+}
+
+
+
+
+/* Highlights Section Styles */
+.highlights {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 40px 0;
+    text-align: center;
+}
+.highlight {
+    background-color: rgba(255, 255, 255, 0.1); 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    flex: 1 1 30%;
+    max-width: 30%;
+    transition: transform 0.3s ease;
+}
+.highlight:hover {
+    transform: translateY(-10px);
+}
+@media (max-width: 768px) {
+    .highlight {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+
+
+/* Newsletter Form Styles */
+.newsletter form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.newsletter button:hover {
+    background-color: #0056b3;
+}
+
+
+
+/* Table Styles */
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 90%;
+    max-width: 800px;
+}
+th, td {
+    border: 1px solid black;
+    padding: 15px;
+    text-align: left;
+}
+
+
+
+/* Image Styles */
+
+img[src="Furkan Güzlek used sofa.jpg"], img[src="Suzy Hazelwood old book.jpg"] {
+    width: 50%;
+}
+
+
+/* Contact Us */
+
+.contact-info {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.contact-info h3 {
+color: #333;
+margin-bottom: 10px;
+}
+.contact-info p {
+margin: 5px 0;
+}
+.contact-info a {
+color: #007bff;
+text-decoration: none;
+}
+
+
+/* Miscellaneous Styles */
+
+.activity img, .testimonial img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+
+
+/* Footer Styles */
+footer {
+    background-color: #f0f0f0;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin-top: auto;
+}
+
