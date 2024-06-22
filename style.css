@@ -47,13 +47,33 @@ h1 {
 
 
 
+
 /* Navigation Styles */
 nav ul {
-    display: flex; /*arrange the navigation button in horizontal*/
-    list-style: none; /*remove list point on each navigation button*/
+    display: flex;
+    justify-content: center;
+    list-style: none;
     padding: 0;
     margin: 0;
 }
+nav ul li {
+    margin: 0 10px;
+}
+nav ul li a {
+    display: inline-block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    border-radius: 5px;
+}
+nav ul li a:hover {
+    background-color: #ff5733;
+    color: #fff;
+}
+
 
 .btnnav {
     padding: 10px 20px;
