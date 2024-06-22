@@ -1,49 +1,53 @@
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
-    margin: 0; /*allowing content to extend to the edges of the viewport*/
-	background-color: gray;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(173, 216, 230, 1);
     background-image: url('Nur Andi Ravsanjani Gusma.jpg');
-    background-size: cover; /*Ensures that the background image covers the entire body area*/
-    background-position: center; /*image will be centered both vertically and horizontally within the body*/
-    display: flex; /*makes the body a flex container , solve the footer problem, always make sure footer at the bottom*/
-    flex-direction: column; /*the flex container (body) arranges its children vertically, from top to bottom.*/
-    min-height: 100vh; /*100% of the viewport height , also solve the footer problem, always make sure footer at the bottom*/
+    background-size: cover; 
+    background-position: center; 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
 }
 
 
 
 /* Header Styles */
 header {
-    background-color: gray; /*Sets the background color of the header*/
-    color: #fff; /*Sets the text color inside the header*/
-    padding: 1rem; /*Adds space inside the header around its content*/
-    text-align: center;/*Centers the text horizontally inside the header ,centered*/ 
+    background-color: #000; 
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
     background-image: url('RDNE Stock project.jpg');
     background-size: cover;
     background-position: center;
-    height: 300px; /*Sets the height of the header*/
+    background-repeat: no-repeat;
+    height: 300px;
     display: flex;
-    flex-direction: column; /*the flex container (header) arranges its children vertically, from top to bottom*/
-    justify-content: center; /*Centers the child elements vertically within the header*/
-    align-items: center; /*solve the background box to fot with the header font size*/
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     font-family: Arial, sans-serif;
 }
+
 h1 {
-    margin: 0; /*Removes the default margin around the h1 element*/
-    padding: 20px 40px; /*Adds space inside the h1 element around its content , 20px: Padding on the top and bottom , 40px: Padding on the left and right , */
+    margin: 0;
+    padding: 20px 40px;
     font-size: 6rem; 
     color: white;
-    background: linear-gradient(to left, rgba(255, 255, 255, 0.7), rgba(128, 128, 128, 0.9)); /*Applies a gradient background to the h1 element*/
-    border-radius: 10px; /*Rounds the corners of the h1 element*/
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.7), rgba(128, 128, 128, 0.9)); 
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 .container {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    height: 8vh; /*container's height will always be 8% of the total viewport height*/
+    height: 8vh;
 }
-
 
 
 
@@ -74,20 +78,18 @@ nav ul li a:hover {
     color: #fff;
 }
 
-
 .btnnav {
+    display: inline-block;
     padding: 10px 20px;
     background-color: gray;
-    color: white;
-    text-decoration: none; /*remove underline for each text navigation*/
-	font-weight: bold;
+    color: #fff;
+    text-decoration: none;
     font-size: 1rem;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-	margin: 0 10px; /*0 on the top and bottom, 10px on the left and right*/
 }
 .btnnav:hover {
-    background-color: #e04e2f; /*e0 represents the intensity of red , 4e represents the intensity of green , 2f represents the intensity of blue*/
+    background-color: #e04e2f;
 }
 
 
@@ -95,7 +97,7 @@ nav ul li a:hover {
 .main-content {
     flex: 1;
     padding: 2rem;
-    text-align: center; /*Center-align any text or inline elements within it*/
+    text-align: center;
 }
 
 
@@ -108,7 +110,8 @@ nav ul li a:hover {
     padding: 20px;
     width: 90%;
     max-width: 800px;
-    color: #333; /* Font color dark gray */
+    transition: transform 0.3s ease;
+    color: #333; /* Font color */
 }
 .about-section h2, .team-section h2, .aim-section h2 {
     font-size: 2rem;
@@ -166,24 +169,32 @@ nav ul li a:hover {
 /* Form Styles */
 form {
     display: flex;
-    flex-wrap: wrap; /*Allows the form elements to wrap onto the next line* , making the form responsive*/
-    gap: 15px; /*allow gap between box*/
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
 }
-
-form button {
-    flex-basis: 100%; /*spans the submit button full width*/
-    padding: 10px; /* size for the button*/
-    margin-top: 5px; /* size for the button*/
-    font-size: 16px; /* size for the button*/
+form label {
+    flex-basis: 100%;
+    text-align: left;
 }
-form input, form textarea, form select, form button { /*use to set the login form page since id for the story page is used same as storyform*/
+form input, form textarea, form select, form button {
     flex-basis: 100%;
     padding: 10px;
     margin-top: 5px;
     font-size: 16px;
-
 }
-
+form button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+form button:hover {
+    background-color: #555;
+}
 
 
 
@@ -193,11 +204,30 @@ form input, form textarea, form select, form button { /*use to set the login for
     max-width: 500px;
     margin: 0 auto;
     padding: 20px;
- 
+    text-align: left;
 }
-
-
-/* Form Submit Buttons */
+#donationForm input[type="text"], 
+#donationForm input[type="email"], 
+#donationForm input[type="tel"], 
+#donationForm textarea, 
+#donationForm select, 
+#RequestForm input[type="text"], 
+#RequestForm input[type="email"], 
+#RequestForm input[type="tel"], 
+#RequestForm textarea, 
+#RequestForm select, 
+#volunteerForm input[type="text"], 
+#volunteerForm input[type="email"], 
+#volunteerForm input[type="tel"], 
+#volunteerForm textarea, 
+#volunteerForm select, 
+#StoryForm input[type="text"], 
+#StoryForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
 #donationForm button[type="submit"], 
 #RequestForm button[type="submit"], 
 #volunteerForm button[type="submit"], 
@@ -209,17 +239,16 @@ form input, form textarea, form select, form button { /*use to set the login for
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
-
 #donationForm button[type="submit"]:hover, 
 #RequestForm button[type="submit"]:hover, 
 #volunteerForm button[type="submit"]:hover, 
 #StoryForm button[type="submit"]:hover {
     background-color: #0056b3;
 }
-
-
+#donationsContainer, #RequestsContainer, #StoryContainer, #volunteerOpportunitiesContainer {
+    text-align: center;
+}
 
 
 
@@ -240,12 +269,12 @@ form input, form textarea, form select, form button { /*use to set the login for
     font-size: 1.25rem;
     margin-bottom: 20px;
 }
-.btn { /*button setting on homepage*/
+.btn {
     display: inline-block;
     padding: 10px 20px;
     background-color: #ff5733;
     color: #fff;
-    text-decoration: none; /*remove underline*/
+    text-decoration: none;
     font-size: 1rem;
     border-radius: 5px;
     transition: background-color 0.3s ease;
@@ -293,7 +322,13 @@ form input, form textarea, form select, form button { /*use to set the login for
     flex-direction: column;
     align-items: center;
 }
-
+.newsletter input {
+    padding: 10px;
+    font-size: 1rem;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 400px;
+}
 .newsletter button {
     padding: 10px 20px;
     background-color: #007bff;
